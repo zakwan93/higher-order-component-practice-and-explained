@@ -22,7 +22,9 @@ const withData = WrappedComponent => {
       const { dataSource, ...otherProps } = this.props;
 
       return this.state.data.length < 1 ? (
-        <h1 style={{ textAlign: "center", width: "100%" }}>LOADING</h1>
+        <h1 style={{ textAlign: "center", width: "100%", color: "blue" }}>
+          LOADING
+        </h1>
       ) : (
         <WrappedComponent data={this.state.data} {...otherProps} />
       );
