@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const withData = WrappedComponent => {
   class WithData extends React.Component {
@@ -22,7 +22,7 @@ const withData = WrappedComponent => {
       const { dataSource, ...otherProps } = this.props;
 
       return this.state.data.length < 1 ? (
-        <h1>LOADING</h1>
+        <h1 style={{ textAlign: "center", width: "100%" }}>LOADING</h1>
       ) : (
         <WrappedComponent data={this.state.data} {...otherProps} />
       );
